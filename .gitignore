@@ -1,0 +1,32 @@
+# build output
+dist
+.next
+
+# logs & pids
+*.log
+pids
+
+# dependencies
+node_modules
+package-lock.json
+yarn.lock
+!/yarn.lock
+test/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
