@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
     fetchWeatherByCountry,
     fetchWeatherByLocation,
@@ -35,28 +35,21 @@ export const useWeather = () => {
         setLoading(false);
     };
 
-    const getCurrentPosition = () =>
-        navigator.geolocation.getCurrentPosition(fetchWeatherByPosition);
+    const getCurrentPosition = useCallback(() =>
+        navigator.geolocation.getCurrentPosition(fetchWeatherByPosition), []);
 
     const fetchWeatherByPosition = async (position: GeolocationPosition) => {
         const {
             coords: { latitude, longitude },
         } = position;
-        setLoading(true);
         const data = await fetchWeatherByLocation(latitude, longitude);
         setCurrentPositionData([data]);
-        setLoading(false);
-    };
-
-    const reset = () => {
-        fetchAllWeather();
-        getCurrentPosition();
     };
 
     useEffect(() => {
         fetchAllWeather();
         getCurrentPosition();
-    }, []);
+    }, [getCurrentPosition]);
 
     return { allData, loading, getCurrentPosition, currentPositionData };
 };
