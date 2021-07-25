@@ -1,5 +1,5 @@
 import "./style.css";
-import { WeatherType } from '../../../util/types';
+import { WeatherType } from '../../../utils/types';
 
 export const selectWeatherIcon = (type: WeatherType) => {
     switch (type) {

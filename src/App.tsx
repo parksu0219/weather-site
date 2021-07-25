@@ -9,7 +9,7 @@ import {
 import { useState, useMemo } from "react";
 import { IconSunny, IconMoon } from "./images";
 import { useWeather, useDarkMode } from "./hooks";
-import { navType } from "./util/types";
+import { navType } from "./utils/types";
 import "./App.css";
 
 const navs: navType[] = [
