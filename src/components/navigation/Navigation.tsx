@@ -1,4 +1,4 @@
-import { navType } from "../util/types";
+import { navType } from "../../util/types";
 
 type NavigationProps = {
     list: navType[];

@@ -1,4 +1,4 @@
-import { WeatherType } from "../util/types";
+import { WeatherType } from "../../util/types";
 
 type CardProps = {
     children: React.ReactNode;

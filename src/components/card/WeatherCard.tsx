@@ -1,4 +1,4 @@
-import { countryEmoji } from "../util/constants";
+import { countryEmoji } from "../../util/constants";
 
 type Props = {
     imgSrc: string;

@@ -8,15 +8,6 @@ import {
 } from "./components";
 import { useState, useMemo } from "react";
 import { IconSunny, IconMoon } from "./images";
-// import {
-//   Sunny,
-//   SunnyShower,
-//   ThunderStorm,
-//   Cloudy,
-//   Flurries,
-//   Rainy,
-//   selectWeatherIcon,
-// } from "./components/icons";
 import { useWeather, useDarkMode } from "./hooks";
 import { navType } from "./util/types";
 import "./App.css";
@@ -156,33 +147,8 @@ export const App: React.FC = () => {
             : currentNav === "all"
               ? allWeatherCard
               : currentPositionWeatherCard}
-
-          {/* <Card>
-            <Sunny />
-          </Card>
-          <Card>
-            <SunnyShower />
-          </Card>
-          <Card>
-            <ThunderStorm />
-          </Card>
-          <Card>
-            <Cloudy />
-          </Card>
-          <Card>
-            <Flurries />
-          </Card>
-          <Card>
-            <Rainy />
-          </Card> */}
         </div>
       </div>
     </div>
   );
 };
-
-// 로딩 컴포넌트 작성
-
-// darkMode background color: #18191B
-// card : #424242
-//  dynamic img load 중에는 카드를 안띄우도록 함
