@@ -15,5 +15,3 @@ export const Card: React.FC<CardProps> = (props) => {
         </div>
     );
 };
-
-// bg-gray-900
