@@ -2,5 +2,5 @@
 
 i just made Tailwind css for presentation.
 
-### skill
+## Skill
 Tailwind css, React, Typescript, openWeather (Open API)
